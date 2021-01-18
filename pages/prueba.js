@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import Link from "next/link"
+import { useState } from "react"
 
 import en from "../locales/en"
 import es from "../locales/es"
@@ -13,7 +13,7 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<main className={styles.main}>
-				<h1 className={styles.title}>{t.hello}</h1>
+				<h1 className={styles.title}>probando las rutas {locale}</h1>
 				<h1 className={styles.title}>
 					Welcome to <a href="https://nextjs.org">Next.js!</a>
 				</h1>
@@ -23,10 +23,10 @@ export default function Home() {
 				</p>
 
 				<div className={styles.grid}>
-					<h3>siguiente pagina</h3>
-					<Link href="/prueba">
-						<a>ir a la sig pagina</a>
-					</Link>
+					<a href="https://nextjs.org/docs" className={styles.card}>
+						<h3>Documentation &rarr;</h3>
+						<p>Find in-depth information about Next.js features and API.</p>
+					</a>
 
 					<a href="https://nextjs.org/learn" className={styles.card}>
 						<h3>Learn &rarr;</h3>
